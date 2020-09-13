@@ -13,11 +13,8 @@ const ProfileContent = () => {
       />
       <Text size="xxlarge">Arsentii Zakharchenko</Text>
       <Text size="large" margin="xsmall">
-        Master of Information Technology
+        Full Stack Software Engineer
       </Text>
-      <Anchor size="medium" margin="xsmall" href="#">
-        Monash University
-      </Anchor>
       <Box direction="row">
         <Anchor size="large" href="#" icon={<Mail size="medium" />}>
           Email

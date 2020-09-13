@@ -87,10 +87,10 @@ const Biography = () => {
       margin="medium"
       pad="large"
     >
-      <Box gridArea="profilePic" background="light-5">
+      <Box gridArea="profilePic">
         <ProfileContent />
       </Box>
-      <Box gridArea="bioContent" background="light-2">
+      <Box gridArea="bioContent">
         <BioContent />
       </Box>
     </ResponsiveGrid>
