@@ -9,7 +9,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
-import { Grommet } from "grommet"
+import { Grommet, Main } from "grommet"
 import { grommet } from "grommet/themes"
 import Header from "./header"
 import Footer from "./footer"
@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
   return (
     <Grommet theme={grommet}>
       <Header siteTitle={data.site.siteMetadata.title} />
-      {children}
+      <Main margin="small">{children}</Main>
       <Footer />
     </Grommet>
   )

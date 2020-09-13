@@ -7,7 +7,7 @@ const skills = ["Javascript", "React", "Django"]
 const interests = [
   "Cloud computing",
   "Distributed systems",
-  "React Native",
+  "Hybrid App development",
   "Machine Learning",
 ]
 

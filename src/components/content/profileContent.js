@@ -6,24 +6,29 @@ const ProfileContent = () => {
   return (
     <Box align="center" direction="column" pad="medium">
       <Avatar
+        margin="small"
         round="large"
         src="//s.gravatar.com/avatar/b7fb138d53ba0f573212ccce38a7c43b?s=80"
         size="xlarge"
       />
-      <Text>Arsentii Zakharchenko</Text>
-      <Text>Master of Information Technology</Text>
-      <Anchor href="#">Monash University</Anchor>
+      <Text size="xxlarge">Arsentii Zakharchenko</Text>
+      <Text size="large" margin="xsmall">
+        Master of Information Technology
+      </Text>
+      <Anchor size="medium" margin="xsmall" href="#">
+        Monash University
+      </Anchor>
       <Box direction="row">
-        <Anchor href="#" icon={<Mail />}>
+        <Anchor size="large" href="#" icon={<Mail size="medium" />}>
           Email
         </Anchor>
-        <Anchor href="#" icon={<Linkedin />}>
+        <Anchor size="large" href="#" icon={<Linkedin size="medium" />}>
           LinkedIn
         </Anchor>
-        <Anchor href="#" icon={<Github />}>
+        <Anchor size="large" href="#" icon={<Github size="medium" />}>
           Github
         </Anchor>
-        <Anchor href="#" icon={<Twitter />}>
+        <Anchor size="large" href="#" icon={<Twitter size="medium" />}>
           Twitter
         </Anchor>
       </Box>
