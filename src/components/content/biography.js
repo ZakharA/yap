@@ -2,6 +2,8 @@ import React from "react"
 
 import { Grid, Box, ResponsiveContext } from "grommet"
 import ProfileContent from "./profileContent"
+import BioContent from "./bioContent"
+
 const columns = {
   small: ["auto"],
   medium: ["auto", "auto"],
@@ -9,15 +11,13 @@ const columns = {
   xlarge: ["auto", "auto"],
 }
 
-// If the size is small, we have 3 rows
-// If the size is medium, we have 2 rows
-// If the size is large or xlarge, we have 1 row
 const rows = {
   small: ["auto", "auto"],
   medium: ["auto"],
   large: ["auto"],
   xlarge: ["auto"],
 }
+
 const fixedGridAreas = {
   small: [
     { name: "profilePic", start: [0, 0], end: [0, 0] },
@@ -61,8 +61,6 @@ const ResponsiveGrid = ({
         }
       }
 
-      // Also if areas is a simple array not an object of arrays for
-      // different sizes
       let areasVal = areas
       if (areas && !Array.isArray(areas)) areasVal = areas[size]
 
@@ -93,7 +91,7 @@ const Biography = () => {
         <ProfileContent />
       </Box>
       <Box gridArea="bioContent" background="light-2">
-        text
+        <BioContent />
       </Box>
     </ResponsiveGrid>
   )
