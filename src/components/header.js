@@ -11,20 +11,18 @@ const PageHeader = ({ siteTitle }) => (
           <Menu
             items={[
               { label: "About Me", onClick: () => {} },
-              { label: "Experience", onClick: () => {} },
               { label: "Blog", onClick: () => {} },
               { label: "Projects", onClick: () => {} },
-              { label: "CV", onClick: () => {} },
+              { label: "Resume", onClick: () => {} },
               { label: "Contact", onClick: () => {} },
             ]}
           />
         ) : (
           <Nav direction="row" align="end">
             <Anchor label="About Me" />
-            <Anchor label="Experience" />
             <Anchor label="Blog" />
             <Anchor label="Projects" />
-            <Anchor label="CV" />
+            <Anchor label="Resume" />
             <Anchor label="Contact" />
           </Nav>
         )

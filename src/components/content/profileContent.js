@@ -11,6 +11,7 @@ const ProfileContent = () => {
         size="xlarge"
       />
       <Text>Arsentii Zakharchenko</Text>
+      <Text>Master of Information Technology</Text>
       <Anchor href="#">Monash University Postgraduate</Anchor>
       <Box direction="row">
         <Anchor href="#" icon={<Mail />}>
