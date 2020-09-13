@@ -10,7 +10,7 @@ const PageHeader = ({ siteTitle }) => (
         size === "small" ? (
           <Menu
             items={[
-              { label: "Bio", onClick: () => {} },
+              { label: "About Me", onClick: () => {} },
               { label: "Experience", onClick: () => {} },
               { label: "Blog", onClick: () => {} },
               { label: "Projects", onClick: () => {} },
@@ -20,7 +20,7 @@ const PageHeader = ({ siteTitle }) => (
           />
         ) : (
           <Nav direction="row" align="end">
-            <Anchor label="Bio" />
+            <Anchor label="About Me" />
             <Anchor label="Experience" />
             <Anchor label="Blog" />
             <Anchor label="Projects" />
