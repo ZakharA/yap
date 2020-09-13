@@ -12,7 +12,7 @@ const ProfileContent = () => {
       />
       <Text>Arsentii Zakharchenko</Text>
       <Text>Master of Information Technology</Text>
-      <Anchor href="#">Monash University Postgraduate</Anchor>
+      <Anchor href="#">Monash University</Anchor>
       <Box direction="row">
         <Anchor href="#" icon={<Mail />}>
           Email
