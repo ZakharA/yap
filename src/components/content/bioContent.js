@@ -71,7 +71,8 @@ const CustomList = ({ items }) => {
 const BioContent = () => {
   return (
     <Box pad="medium">
-      <Heading>About me</Heading>
+      <Heading level={2}>About me</Heading>
+
       <Paragraph size="large" fill={true}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor

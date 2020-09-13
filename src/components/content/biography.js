@@ -77,7 +77,7 @@ const ResponsiveGrid = ({
   </ResponsiveContext.Consumer>
 )
 
-const Biography = () => {
+const Biography = ({ image }) => {
   return (
     <ResponsiveGrid
       rows={rows}
@@ -88,7 +88,7 @@ const Biography = () => {
       pad="large"
     >
       <Box gridArea="profilePic">
-        <ProfileContent />
+        <ProfileContent image={image} />
       </Box>
       <Box gridArea="bioContent">
         <BioContent />
