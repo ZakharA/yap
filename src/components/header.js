@@ -1,42 +1,44 @@
-import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
+import { Box, Header, Nav, Menu, Anchor, ResponsiveContext } from "grommet"
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-  </header>
+const PageHeader = ({ siteTitle }) => (
+  <Header pad="medium">
+    <Box direction="row" align="center" gap="Medium"></Box>
+    <ResponsiveContext.Consumer>
+      {size =>
+        size === "small" ? (
+          <Menu
+            items={[
+              { label: "Bio", onClick: () => {} },
+              { label: "Experience", onClick: () => {} },
+              { label: "Blog", onClick: () => {} },
+              { label: "Projects", onClick: () => {} },
+              { label: "CV", onClick: () => {} },
+              { label: "Contact", onClick: () => {} },
+            ]}
+          />
+        ) : (
+          <Nav direction="row" align="end">
+            <Anchor label="Bio" />
+            <Anchor label="Experience" />
+            <Anchor label="Blog" />
+            <Anchor label="Projects" />
+            <Anchor label="CV" />
+            <Anchor label="Contact" />
+          </Nav>
+        )
+      }
+    </ResponsiveContext.Consumer>
+  </Header>
 )
 
-Header.propTypes = {
+PageHeader.propTypes = {
   siteTitle: PropTypes.string,
 }
 
-Header.defaultProps = {
+PageHeader.defaultProps = {
   siteTitle: ``,
 }
 
-export default Header
+export default PageHeader
