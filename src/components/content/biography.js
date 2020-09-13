@@ -6,9 +6,9 @@ import BioContent from "./bioContent"
 
 const columns = {
   small: ["auto"],
-  medium: ["auto", "auto"],
-  large: ["auto", "auto"],
-  xlarge: ["auto", "auto"],
+  medium: ["auto", "auto", "auto"],
+  large: ["auto", "auto", "auto"],
+  xlarge: ["auto", "auto", "auto"],
 }
 
 const rows = {
@@ -25,15 +25,15 @@ const fixedGridAreas = {
   ],
   medium: [
     { name: "profilePic", start: [0, 0], end: [0, 0] },
-    { name: "bioContent", start: [1, 0], end: [1, 0] },
+    { name: "bioContent", start: [1, 0], end: [2, 0] },
   ],
   large: [
     { name: "profilePic", start: [0, 0], end: [0, 0] },
-    { name: "bioContent", start: [1, 0], end: [1, 0] },
+    { name: "bioContent", start: [1, 0], end: [2, 0] },
   ],
   xlarge: [
     { name: "profilePic", start: [0, 0], end: [0, 0] },
-    { name: "bioContent", start: [1, 0], end: [1, 0] },
+    { name: "bioContent", start: [1, 0], end: [2, 0] },
   ],
 }
 
