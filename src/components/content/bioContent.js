@@ -70,7 +70,7 @@ const CustomList = ({ items }) => {
 
 const BioContent = () => {
   return (
-    <Box pad="medium">
+    <Box pad="medium" animation={{ type: "slideDown", duration: 1000 }}>
       <Heading level={2}>About me</Heading>
 
       <Paragraph size="large" fill={true}>
@@ -87,15 +87,15 @@ const BioContent = () => {
         gap="large"
         margin={{ left: "small" }}
       >
-        <Box>
+        <Box animation={{ type: "slideUp", duration: 2000 }}>
           <Heading level={2}>Skills: </Heading>
           <CustomList items={skills} />
         </Box>
-        <Box>
+        <Box animation={{ type: "slideUp", duration: 2000 }}>
           <Heading level={2}>Interests: </Heading>
           <CustomList items={interests} />
         </Box>
-        <Box>
+        <Box animation={{ type: "slideUp", duration: 2000 }}>
           <Heading level={2}>Education: </Heading>
           <List
             data={education}
