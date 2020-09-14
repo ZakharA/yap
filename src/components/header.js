@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
+
 import { Box, Header, Nav, Menu, Anchor, ResponsiveContext } from "grommet"
 
 const PageHeader = ({ siteTitle }) => (
@@ -19,9 +20,14 @@ const PageHeader = ({ siteTitle }) => (
           />
         ) : (
           <Nav direction="row" align="end">
-            <Anchor label="About Me" />
-            <Anchor label="Blog" />
-            <Anchor label="Projects" />
+            <Anchor href="/" label="About Me" />
+            <Anchor
+              onClick={() => {
+                window.location.href = "https://fullstacksaga.com"
+              }}
+              label="Blog"
+            />
+            <Anchor href="/projects" label="Projects" />
             <Anchor label="Resume" />
             <Anchor label="Contact" />
           </Nav>
