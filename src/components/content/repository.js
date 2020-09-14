@@ -5,8 +5,10 @@ import RepoTopics from "./repoTopics"
 const Repository = ({ repository, index }) => {
   return (
     <Card
+      hoverIndicator={true}
       pad="medium"
       gap="small"
+      elevation="small"
       key={index}
       onClick={() => {
         window.location.href = repository.node.url
