@@ -10,6 +10,7 @@ const Repository = ({ repository, index }) => {
       gap="small"
       elevation="small"
       key={index}
+      animation={{ type: "zoomIn", duration: 2000 }}
       onClick={() => {
         window.location.href = repository.node.url
       }}
