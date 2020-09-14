@@ -10,12 +10,42 @@ const PageHeader = ({ siteTitle }) => (
       {size =>
         size === "small" ? (
           <Menu
+            margin={{ right: "medium" }}
+            pad="small"
+            dropProps={{ align: { top: "top", right: "right" } }}
             items={[
-              { label: "About Me", onClick: () => {} },
-              { label: "Blog", onClick: () => {} },
-              { label: "Projects", onClick: () => {} },
-              { label: "Resume", onClick: () => {} },
-              { label: "Contact", onClick: () => {} },
+              {
+                label: (
+                  <Anchor href="/" margin="medium">
+                    About Me
+                  </Anchor>
+                ),
+                onClick: () => {},
+              },
+              {
+                label: (
+                  <Anchor href="https://fullstacksaga.com" margin="medium">
+                    Blog
+                  </Anchor>
+                ),
+                onClick: () => {},
+              },
+              {
+                label: (
+                  <Anchor href="/projects" margin="medium">
+                    Projects
+                  </Anchor>
+                ),
+                onClick: () => {},
+              },
+              {
+                label: <Anchor margin="medium">Resume</Anchor>,
+                onClick: () => {},
+              },
+              {
+                label: <Anchor margin="medium">Contact</Anchor>,
+                onClick: () => {},
+              },
             ]}
           />
         ) : (
