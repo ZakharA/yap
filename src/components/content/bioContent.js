@@ -88,7 +88,11 @@ const ResponsiveGrid = ({ children, areas, ...props }) => {
 const BioContent = () => {
   const size = React.useContext(ResponsiveContext)
   return (
-    <Box pad="medium" animation={{ type: "slideDown", duration: 1000 }}>
+    <Box
+      pad="medium"
+      margin={{ top: "medium" }}
+      animation={{ type: "slideDown", duration: 1000 }}
+    >
       <Heading level={2}>About me</Heading>
 
       <Paragraph size="large" fill={true}>

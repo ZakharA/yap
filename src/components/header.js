@@ -4,7 +4,7 @@ import React from "react"
 import { Box, Header, Nav, Menu, Anchor, ResponsiveContext } from "grommet"
 
 const PageHeader = ({ siteTitle }) => (
-  <Header pad="medium">
+  <Header pad="medium" elevation="medium">
     <Box direction="row" align="center" gap="Medium"></Box>
     <ResponsiveContext.Consumer>
       {size =>

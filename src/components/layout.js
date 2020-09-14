@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
   return (
     <Grommet theme={grommet}>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <Main margin={{ horizontal: "small" }}>{children}</Main>
+      <Main margin={{ horizontal: "small", top: "medium" }}>{children}</Main>
       <Footer />
     </Grommet>
   )
