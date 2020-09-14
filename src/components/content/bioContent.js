@@ -1,6 +1,14 @@
-import React from "react"
+import React, { useContext } from "react"
 
-import { Paragraph, Box, List, Heading, Text } from "grommet"
+import {
+  Paragraph,
+  Box,
+  List,
+  Heading,
+  Text,
+  ResponsiveContext,
+  Grid,
+} from "grommet"
 import {
   Node,
   Reactjs,
@@ -68,7 +76,17 @@ const CustomList = ({ items }) => {
   )
 }
 
+const ResponsiveGrid = ({ children, areas, ...props }) => {
+  const size = React.useContext(ResponsiveContext)
+  return (
+    <Grid areas={areas[size]} {...props}>
+      {children}
+    </Grid>
+  )
+}
+
 const BioContent = () => {
+  const size = React.useContext(ResponsiveContext)
   return (
     <Box pad="medium" animation={{ type: "slideDown", duration: 1000 }}>
       <Heading level={2}>About me</Heading>
@@ -81,21 +99,43 @@ const BioContent = () => {
         consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
         et dolore magna aliqua.
       </Paragraph>
-      <Box
-        direction="row-responsive"
-        justify="start"
-        gap="large"
-        margin={{ left: "small" }}
+
+      <ResponsiveGrid
+        columns={["auto", "auto", "auto", "auto"]}
+        rows={["auto", "auto", "auto"]}
+        areas={{
+          small: [
+            { name: "skills", start: [0, 0], end: [3, 0] },
+            { name: "interests", start: [0, 1], end: [3, 1] },
+            { name: "education", start: [0, 2], end: [3, 2] },
+          ],
+          medium: [
+            { name: "skills", start: [0, 0], end: [1, 0] },
+            { name: "interests", start: [2, 0], end: [3, 0] },
+            { name: "education", start: [0, 1], end: [3, 1] },
+          ],
+          large: [
+            { name: "skills", start: [0, 0], end: [1, 0] },
+            { name: "interests", start: [1, 0], end: [2, 0] },
+            { name: "education", start: [2, 0], end: [3, 0] },
+          ],
+        }}
       >
-        <Box animation={{ type: "slideUp", duration: 2000 }}>
+        <Box gridArea="skills" animation={{ type: "slideUp", duration: 2000 }}>
           <Heading level={2}>Skills: </Heading>
           <CustomList items={skills} />
         </Box>
-        <Box animation={{ type: "slideUp", duration: 2000 }}>
+        <Box
+          gridArea="interests"
+          animation={{ type: "slideUp", duration: 2000 }}
+        >
           <Heading level={2}>Interests: </Heading>
           <CustomList items={interests} />
         </Box>
-        <Box animation={{ type: "slideUp", duration: 2000 }}>
+        <Box
+          gridArea="education"
+          animation={{ type: "slideUp", duration: 2000 }}
+        >
           <Heading level={2}>Education: </Heading>
           <List
             data={education}
@@ -125,7 +165,7 @@ const BioContent = () => {
             )}
           </List>
         </Box>
-      </Box>
+      </ResponsiveGrid>
     </Box>
   )
 }

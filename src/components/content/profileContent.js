@@ -16,7 +16,9 @@ const ProfileContent = ({ image }) => {
       >
         <Img fluid={image} alt="" />
       </Box>
-      <Text size="xxlarge">Arsentii Zakharchenko</Text>
+      <Text size="xxlarge" textAlign="center" alignSelf="center">
+        Arsentii Zakharchenko
+      </Text>
       <Text size="large" margin="xsmall">
         Software Engineer
       </Text>
