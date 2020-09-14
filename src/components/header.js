@@ -1,5 +1,6 @@
 import PropTypes from "prop-types"
 import React from "react"
+import { Link } from "gatsby"
 
 import { Box, Header, Nav, Menu, Anchor, ResponsiveContext } from "grommet"
 
@@ -16,9 +17,15 @@ const PageHeader = ({ siteTitle }) => (
             items={[
               {
                 label: (
-                  <Anchor href="/" margin="medium">
-                    About Me
-                  </Anchor>
+                  <Link
+                    style={{
+                      boxShadow: "none",
+                      textDecoration: "none",
+                    }}
+                    to="/"
+                  >
+                    <Anchor margin="medium">About Me</Anchor>
+                  </Link>
                 ),
                 onClick: () => {},
               },
@@ -32,9 +39,17 @@ const PageHeader = ({ siteTitle }) => (
               },
               {
                 label: (
-                  <Anchor href="/projects" margin="medium">
-                    Projects
-                  </Anchor>
+                  <Link
+                    style={{
+                      boxShadow: "none",
+                      textDecoration: "none",
+                    }}
+                    to="/"
+                  >
+                    <Anchor href="/projects" margin="medium">
+                      Projects
+                    </Anchor>
+                  </Link>
                 ),
                 onClick: () => {},
               },
@@ -53,14 +68,31 @@ const PageHeader = ({ siteTitle }) => (
           />
         ) : (
           <Nav direction="row" align="end">
-            <Anchor href="/" label="About Me" />
+            <Link
+              style={{
+                boxShadow: "none",
+                textDecoration: "none",
+              }}
+              to="/"
+            >
+              <Anchor label="About Me" />
+            </Link>
+
             <Anchor
               onClick={() => {
                 window.location.href = "https://fullstacksaga.com"
               }}
               label="Blog"
             />
-            <Anchor href="/projects" label="Projects" />
+            <Link
+              style={{
+                boxShadow: "none",
+                textDecoration: "none",
+              }}
+              to="/projects"
+            >
+              <Anchor label="Projects" />
+            </Link>
             <Anchor
               href="https://drive.google.com/file/d/1qYGkoPzVWWqZXd2F9YtRZmFzguWVxVBe/view?usp=sharing"
               label="Resume"

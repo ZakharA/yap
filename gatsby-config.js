@@ -29,6 +29,10 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-styled-components`,
+      options: {},
+    },
+    {
       resolve: `gatsby-source-github-api`,
       options: {
         token: process.env.GITHUB_PERSONAL_ACCESS_TOKEN,
