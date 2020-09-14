@@ -1,5 +1,5 @@
 import React from "react"
-import { Footer, Text, Anchor, Box } from "grommet"
+import { Footer, Anchor, Box } from "grommet"
 import { FormUp } from "grommet-icons"
 
 const LayoutFooter = () => {
@@ -13,7 +13,7 @@ const LayoutFooter = () => {
             window.scrollTo(0, 0)
           }}
           icon={<FormUp />}
-        ></Anchor>
+        />
       </Box>
     </Footer>
   )

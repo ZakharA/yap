@@ -26,27 +26,19 @@ const ProfileContent = ({ image }) => {
         <Anchor
           href="mailto:arsentii.zakharchenko@gmail.com"
           icon={<Mail size="medium" />}
-        >
-          Email
-        </Anchor>
+        />
         <Anchor
           href="https://www.linkedin.com/in/zakhara/"
           icon={<Linkedin size="medium" />}
-        >
-          LinkedIn
-        </Anchor>
+        />
         <Anchor
           href="https://github.com/Zakhara"
           icon={<Github size="medium" />}
-        >
-          Github
-        </Anchor>
+        />
         <Anchor
           href="https://twitter.com/ArsentiiZ"
           icon={<Twitter size="medium" />}
-        >
-          Twitter
-        </Anchor>
+        />
       </Box>
     </Box>
   )

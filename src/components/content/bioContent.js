@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React from "react"
 
 import {
   Paragraph,
@@ -63,10 +63,9 @@ const CustomList = ({ items }) => {
         <Box
           key={index}
           direction="row"
-          gap="large"
+          gap="small"
           size="xsmall"
           align="center"
-          gap="small"
         >
           {datum.icon}
           <Text weight="bold">{datum.text}</Text>
@@ -86,7 +85,6 @@ const ResponsiveGrid = ({ children, areas, ...props }) => {
 }
 
 const BioContent = () => {
-  const size = React.useContext(ResponsiveContext)
   return (
     <Box
       pad="medium"
@@ -96,12 +94,11 @@ const BioContent = () => {
       <Heading level={2}>About me</Heading>
 
       <Paragraph size="large" fill={true}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor
-        sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
-        ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
-        et dolore magna aliqua.
+        A software engineer with a proven track record of developing and
+        maintaining complex software solutions in product and service
+        environments. The C#, Java, AWS based cloud development, Agile workflow,
+        Docker, and Test Driven Development are some of the fields I have gained
+        hands-on expertise while working on existing and past projects.
       </Paragraph>
 
       <ResponsiveGrid
@@ -153,7 +150,6 @@ const BioContent = () => {
               <Box
                 key={index}
                 direction="row"
-                gap="large"
                 size="xsmall"
                 align="center"
                 gap="small"
