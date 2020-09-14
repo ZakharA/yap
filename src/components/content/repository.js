@@ -20,8 +20,10 @@ const Repository = ({ repository, index }) => {
         <Paragraph size="small" fill={true}>
           {repository.node.description}
         </Paragraph>
-        <RepoTopics topics={repository.node.repositoryTopics.edges} />
       </CardBody>
+      <CardFooter>
+        <RepoTopics topics={repository.node.repositoryTopics.edges} />
+      </CardFooter>
     </Card>
   )
 }

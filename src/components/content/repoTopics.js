@@ -5,7 +5,12 @@ const RepoTopics = ({ topics }) => {
   return (
     <Box direction="row" gap="xsmall">
       {topics.map(topic => (
-        <Box background="brand" pad="xsmall" round="medium">
+        <Box
+          background="brand"
+          pad="xsmall"
+          round="small"
+          style={{ textTransform: "capitalize" }}
+        >
           {topic.node.topic.name}
         </Box>
       ))}
