@@ -34,12 +34,22 @@ module.exports = {
         graphQLQuery: `
         query ($author: String = "", $userFirst: Int = 0, $searchFirst: Int = 0, $q: String = "") {
           user(login: $author) {
-            repositories(first: $userFirst, orderBy: {field: STARGAZERS, direction: DESC}) {
+            repositories(first: $userFirst, privacy: PUBLIC,  orderBy: {field: STARGAZERS, direction: DESC}) {
               edges {
                 node {
                   name
                   description
                   url
+                  isPrivate
+                  repositoryTopics(first: 5) {
+                    edges {
+                      node {
+                        topic {
+                          name
+                        }
+                      }
+                    }
+                  }
                   stargazers {
                     totalCount
                   }
