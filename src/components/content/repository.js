@@ -16,7 +16,9 @@ const Repository = ({ repository, index }) => {
       }}
     >
       <CardBody>
-        <Heading level="3">{repository.node.name}</Heading>
+        <Heading style={{ textTransform: "capitalize" }} level="3">
+          {repository.node.name}
+        </Heading>
         <Paragraph size="small" fill={true}>
           {repository.node.description}
         </Paragraph>

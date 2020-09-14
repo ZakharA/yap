@@ -6,9 +6,11 @@ module.exports = {
   siteMetadata: {
     title: `Arsentii Zakharchenko`,
     description: `My portfolio`,
-    author: `@gatsbyjs`,
+    author: `@ArsentiiZ`,
+    siteUrl: "https://zakhara.github.io/yap/",
   },
   plugins: [
+    "gatsby-plugin-robots-txt",
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

@@ -46,9 +46,7 @@ const PageHeader = ({ siteTitle }) => (
                     }}
                     to="/"
                   >
-                    <Anchor href="/projects" margin="medium">
-                      Projects
-                    </Anchor>
+                    <Anchor margin="medium">Projects</Anchor>
                   </Link>
                 ),
                 onClick: () => {},
