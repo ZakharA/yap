@@ -21,16 +21,28 @@ const ProfileContent = ({ image }) => {
         Software Engineer
       </Text>
       <Box direction="row">
-        <Anchor href="#" icon={<Mail size="medium" />}>
+        <Anchor
+          href="mailto:arsentii.zakharchenko@gmail.com"
+          icon={<Mail size="medium" />}
+        >
           Email
         </Anchor>
-        <Anchor href="#" icon={<Linkedin size="medium" />}>
+        <Anchor
+          href="https://www.linkedin.com/in/zakhara/"
+          icon={<Linkedin size="medium" />}
+        >
           LinkedIn
         </Anchor>
-        <Anchor href="#" icon={<Github size="medium" />}>
+        <Anchor
+          href="https://github.com/Zakhara"
+          icon={<Github size="medium" />}
+        >
           Github
         </Anchor>
-        <Anchor href="#" icon={<Twitter size="medium" />}>
+        <Anchor
+          href="https://twitter.com/ArsentiiZ"
+          icon={<Twitter size="medium" />}
+        >
           Twitter
         </Anchor>
       </Box>
