@@ -39,7 +39,14 @@ const PageHeader = ({ siteTitle }) => (
                 onClick: () => {},
               },
               {
-                label: <Anchor margin="medium">Resume</Anchor>,
+                label: (
+                  <Anchor
+                    href="https://drive.google.com/file/d/1qYGkoPzVWWqZXd2F9YtRZmFzguWVxVBe/view?usp=sharing"
+                    margin="medium"
+                  >
+                    Resume
+                  </Anchor>
+                ),
                 onClick: () => {},
               },
               {
@@ -58,7 +65,10 @@ const PageHeader = ({ siteTitle }) => (
               label="Blog"
             />
             <Anchor href="/projects" label="Projects" />
-            <Anchor label="Resume" />
+            <Anchor
+              href="https://drive.google.com/file/d/1qYGkoPzVWWqZXd2F9YtRZmFzguWVxVBe/view?usp=sharing"
+              label="Resume"
+            />
             <Anchor label="Contact" />
           </Nav>
         )
