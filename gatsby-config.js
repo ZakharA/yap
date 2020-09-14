@@ -2,6 +2,7 @@ const dotenv = require("dotenv")
 dotenv.config()
 
 module.exports = {
+  pathPrefix: `/yap`,
   siteMetadata: {
     title: `Arsentii Zakharchenko`,
     description: `My portfolio`,
