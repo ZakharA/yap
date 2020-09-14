@@ -44,7 +44,7 @@ const PageHeader = ({ siteTitle }) => (
                       boxShadow: "none",
                       textDecoration: "none",
                     }}
-                    to="/"
+                    to="/projects"
                   >
                     <Anchor margin="medium">Projects</Anchor>
                   </Link>
