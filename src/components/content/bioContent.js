@@ -1,14 +1,6 @@
 import React from "react"
 
-import {
-  Paragraph,
-  Box,
-  List,
-  Heading,
-  Text,
-  ResponsiveContext,
-  Grid,
-} from "grommet"
+import { Paragraph, Box, Heading } from "grommet"
 import {
   Node,
   Reactjs,
@@ -21,6 +13,7 @@ import {
 } from "grommet-icons"
 
 import CustomList from "./customList"
+import ResponsiveGrid from "./responvsiveGrid"
 
 const skills = [
   { icon: <Node color="brand" />, text: "Javascript" },
@@ -49,13 +42,24 @@ const education = [
   },
 ]
 
-const ResponsiveGrid = ({ children, areas, ...props }) => {
-  const size = React.useContext(ResponsiveContext)
-  return (
-    <Grid areas={areas[size]} {...props}>
-      {children}
-    </Grid>
-  )
+const columns = ["auto", "auto", "auto", "auto"]
+const rows = ["auto", "auto", "auto"]
+const areas = {
+  small: [
+    { name: "skills", start: [0, 0], end: [3, 0] },
+    { name: "interests", start: [0, 1], end: [3, 1] },
+    { name: "education", start: [0, 2], end: [3, 2] },
+  ],
+  medium: [
+    { name: "skills", start: [0, 0], end: [1, 0] },
+    { name: "interests", start: [2, 0], end: [3, 0] },
+    { name: "education", start: [0, 1], end: [3, 1] },
+  ],
+  large: [
+    { name: "skills", start: [0, 0], end: [1, 0] },
+    { name: "interests", start: [1, 0], end: [2, 0] },
+    { name: "education", start: [2, 0], end: [3, 0] },
+  ],
 }
 
 const BioContent = () => {
@@ -75,27 +79,7 @@ const BioContent = () => {
         hands-on expertise while working on existing and past projects.
       </Paragraph>
 
-      <ResponsiveGrid
-        columns={["auto", "auto", "auto", "auto"]}
-        rows={["auto", "auto", "auto"]}
-        areas={{
-          small: [
-            { name: "skills", start: [0, 0], end: [3, 0] },
-            { name: "interests", start: [0, 1], end: [3, 1] },
-            { name: "education", start: [0, 2], end: [3, 2] },
-          ],
-          medium: [
-            { name: "skills", start: [0, 0], end: [1, 0] },
-            { name: "interests", start: [2, 0], end: [3, 0] },
-            { name: "education", start: [0, 1], end: [3, 1] },
-          ],
-          large: [
-            { name: "skills", start: [0, 0], end: [1, 0] },
-            { name: "interests", start: [1, 0], end: [2, 0] },
-            { name: "education", start: [2, 0], end: [3, 0] },
-          ],
-        }}
-      >
+      <ResponsiveGrid columns={columns} rows={rows} areas={areas}>
         <Box gridArea="skills" animation={{ type: "slideUp", duration: 2000 }}>
           <Heading level={2}>Skills: </Heading>
           <CustomList items={skills} />
