@@ -24,7 +24,7 @@ const CustomList = ({ items }) => {
             <Box direction="column">
               {datum.text}
               <Text weight="bold">
-                {datum.degree}, {datum.year}
+                {datum.extra.degree}, {datum.extra.year}
               </Text>
             </Box>
           ) : (

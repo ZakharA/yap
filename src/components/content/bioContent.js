@@ -40,14 +40,12 @@ const education = [
   {
     icon: <Validate color="brand" />,
     text: "Monash University",
-    degree: "Master of Information Technology",
-    year: " 2020",
+    extra: { degree: "Master of Information Technology", year: " 2020" },
   },
   {
     icon: <Validate color="brand" />,
     text: "Yugra State University",
-    degree: "Bachelor of Software Engineering",
-    year: " 2015",
+    extra: { degree: "Bachelor of Software Engineering", year: " 2015" },
   },
 ]
 
@@ -114,32 +112,7 @@ const BioContent = () => {
           animation={{ type: "slideUp", duration: 2000 }}
         >
           <Heading level={2}>Education: </Heading>
-          <List
-            data={education}
-            border={{
-              color: "none",
-              side: "horizontal",
-              size: "small",
-            }}
-          >
-            {(datum, index) => (
-              <Box
-                key={index}
-                direction="row"
-                size="xsmall"
-                align="center"
-                gap="small"
-              >
-                {datum.icon}
-                <Box direction="column">
-                  {datum.text}
-                  <Text weight="bold">
-                    {datum.degree}, {datum.year}
-                  </Text>
-                </Box>
-              </Box>
-            )}
-          </List>
+          <CustomList items={education} />
         </Box>
       </ResponsiveGrid>
     </Box>
