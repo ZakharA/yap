@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://zakhara.github.io/sitemap.xml
+Host: https://zakhara.github.io
