@@ -18,7 +18,7 @@ export const pageQuery = graphql`
   query {
     imageOne: file(relativePath: { eq: "profile-pic.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1000) {
+        fluid(maxWidth: 768) {
           ...GatsbyImageSharpFluid
         }
       }
