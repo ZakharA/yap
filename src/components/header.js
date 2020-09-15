@@ -1,8 +1,19 @@
 import PropTypes from "prop-types"
 import React from "react"
-import { Link } from "gatsby"
 
-import { Box, Header, Nav, Menu, Anchor, ResponsiveContext } from "grommet"
+import HeaderLink from "./content/headerLink"
+
+import { Box, Header, Nav, Menu, ResponsiveContext } from "grommet"
+
+const links = [
+  <HeaderLink to="/" label="About Me" />,
+  <HeaderLink to="https://fullstacksaga.com" label="Blog" />,
+  <HeaderLink to="/projects" label="Projects" />,
+  <HeaderLink
+    to="https://drive.google.com/file/d/1qYGkoPzVWWqZXd2F9YtRZmFzguWVxVBe/view?usp=sharing"
+    label="Resume"
+  />,
+]
 
 const PageHeader = ({ siteTitle }) => (
   <Header pad="medium" elevation="medium">
@@ -14,87 +25,14 @@ const PageHeader = ({ siteTitle }) => (
             margin={{ right: "medium" }}
             pad="small"
             dropProps={{ align: { top: "top", right: "right" } }}
-            items={[
-              {
-                label: (
-                  <Link
-                    style={{
-                      boxShadow: "none",
-                      textDecoration: "none",
-                    }}
-                    to="/"
-                  >
-                    <Anchor margin="medium">About Me</Anchor>
-                  </Link>
-                ),
-                onClick: () => {},
-              },
-              {
-                label: (
-                  <Anchor href="https://fullstacksaga.com" margin="medium">
-                    Blog
-                  </Anchor>
-                ),
-                onClick: () => {},
-              },
-              {
-                label: (
-                  <Link
-                    style={{
-                      boxShadow: "none",
-                      textDecoration: "none",
-                    }}
-                    to="/projects"
-                  >
-                    <Anchor margin="medium">Projects</Anchor>
-                  </Link>
-                ),
-                onClick: () => {},
-              },
-              {
-                label: (
-                  <Anchor
-                    href="https://drive.google.com/file/d/1qYGkoPzVWWqZXd2F9YtRZmFzguWVxVBe/view?usp=sharing"
-                    margin="medium"
-                  >
-                    Resume
-                  </Anchor>
-                ),
-                onClick: () => {},
-              },
-            ]}
+            items={Array.from(links, item => ({
+              label: item,
+              onClick: () => {},
+            }))}
           />
         ) : (
           <Nav direction="row" align="end">
-            <Link
-              style={{
-                boxShadow: "none",
-                textDecoration: "none",
-              }}
-              to="/"
-            >
-              <Anchor label="About Me" />
-            </Link>
-
-            <Anchor
-              onClick={() => {
-                window.location.href = "https://fullstacksaga.com"
-              }}
-              label="Blog"
-            />
-            <Link
-              style={{
-                boxShadow: "none",
-                textDecoration: "none",
-              }}
-              to="/projects"
-            >
-              <Anchor label="Projects" />
-            </Link>
-            <Anchor
-              href="https://drive.google.com/file/d/1qYGkoPzVWWqZXd2F9YtRZmFzguWVxVBe/view?usp=sharing"
-              label="Resume"
-            />
+            {links}
           </Nav>
         )
       }
