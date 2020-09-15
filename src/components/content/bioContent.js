@@ -12,7 +12,7 @@ import {
   Java,
 } from "grommet-icons"
 
-import CustomList from "./customList"
+import CustomListWrapper from "./customListHeaderWrapper"
 import ResponsiveGrid from "./responvsiveGrid"
 
 const skills = [
@@ -80,24 +80,17 @@ const BioContent = () => {
       </Paragraph>
 
       <ResponsiveGrid columns={columns} rows={rows} areas={areas}>
-        <Box gridArea="skills" animation={{ type: "slideUp", duration: 2000 }}>
-          <Heading level={2}>Skills: </Heading>
-          <CustomList items={skills} />
-        </Box>
-        <Box
+        <CustomListWrapper gridArea="skills" items={skills} text="Skills" />
+        <CustomListWrapper
           gridArea="interests"
-          animation={{ type: "slideUp", duration: 2000 }}
-        >
-          <Heading level={2}>Interests: </Heading>
-          <CustomList items={interests} />
-        </Box>
-        <Box
+          items={interests}
+          text="Interests"
+        />
+        <CustomListWrapper
           gridArea="education"
-          animation={{ type: "slideUp", duration: 2000 }}
-        >
-          <Heading level={2}>Education: </Heading>
-          <CustomList items={education} />
-        </Box>
+          items={education}
+          text="Education"
+        />
       </ResponsiveGrid>
     </Box>
   )
