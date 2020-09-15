@@ -36,12 +36,6 @@ export const query = graphql`
                     }
                   }
                 }
-                stargazers {
-                  totalCount
-                }
-                readme {
-                  text
-                }
               }
             }
           }
