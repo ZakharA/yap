@@ -1,4 +1,3 @@
-import CustomList from "./customList"
 import React from "react"
 import { Box, Heading } from "grommet"
 

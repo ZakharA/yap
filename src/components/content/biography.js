@@ -5,24 +5,14 @@ import ProfileContent from "./profileContent"
 import BioContent from "./bioContent"
 import ResponsiveGrid from "./responvsiveGrid"
 
-const columns = {
-  small: ["auto"],
-  medium: ["auto", "auto", "auto"],
-  large: ["auto", "auto", "auto"],
-  xlarge: ["auto", "auto", "auto"],
-}
+const columns = ["auto", "auto", "auto"]
 
-const rows = {
-  small: ["auto", "auto"],
-  medium: ["auto"],
-  large: ["auto"],
-  xlarge: ["auto"],
-}
+const rows = ["auto", "auto"]
 
 const fixedGridAreas = {
   small: [
-    { name: "profilePic", start: [0, 0], end: [0, 0] },
-    { name: "bioContent", start: [0, 1], end: [0, 1] },
+    { name: "profilePic", start: [0, 0], end: [2, 0] },
+    { name: "bioContent", start: [0, 1], end: [2, 1] },
   ],
   medium: [
     { name: "profilePic", start: [0, 0], end: [0, 0] },
