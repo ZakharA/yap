@@ -20,6 +20,8 @@ import {
   Java,
 } from "grommet-icons"
 
+import CustomList from "./customList"
+
 const skills = [
   { icon: <Node color="brand" />, text: "Javascript" },
   { icon: <Reactjs color="brand" />, text: "React" },
@@ -48,32 +50,6 @@ const education = [
     year: " 2015",
   },
 ]
-
-const CustomList = ({ items }) => {
-  return (
-    <List
-      data={items}
-      border={{
-        color: "none",
-        side: "horizontal",
-        size: "small",
-      }}
-    >
-      {(datum, index) => (
-        <Box
-          key={index}
-          direction="row"
-          gap="small"
-          size="xsmall"
-          align="center"
-        >
-          {datum.icon}
-          <Text weight="bold">{datum.text}</Text>
-        </Box>
-      )}
-    </List>
-  )
-}
 
 const ResponsiveGrid = ({ children, areas, ...props }) => {
   const size = React.useContext(ResponsiveContext)
